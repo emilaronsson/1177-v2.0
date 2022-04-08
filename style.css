@@ -1,2 +1,11 @@
 .mdl-navigation__link { transition: all .2s ease-in-out; }
 .mdl-navigation__link:hover { transform: scale(1.1); }
+.mdl-layout__content {
+    background-color: lightgrey;
+    font-size: large;
+    font-family: sans-serif;
+}
+ .page-content {
+     padding-left: 150px;
+     padding-right: 150px;
+ }

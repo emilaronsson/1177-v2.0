@@ -7,11 +7,11 @@ import {AboutPage} from './about-page.js';
 export class App extends ApplicationBase {
 
     constructor() {
-        super('Base of Operations');
+        super('1177 v2.0');
 
         this.addRoute('Affärsplan', new BusinessPlanPage(), true);
         this.addRoute('Prototyp', new PrototypeIdeaPage());
-        this.addRoute('About', new AboutPage());
+        this.addRoute('Kontakt', new AboutPage());
     }
 
 }
@@ -19,13 +19,3 @@ export class App extends ApplicationBase {
 export let application = new App();
 application.show($('body'))
 
-
-
-// let tb = new TitleBar('1177 v 2.0');
-// tb.addLink('Affärsplan', '');
-// tb.addLink('Prototyp', '');
-// tb.addLink('About', '');
-
-// tb.appendToElement($('header'))
-
-//target_blank för app.html
