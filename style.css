@@ -1,0 +1,2 @@
+.mdl-navigation__link { transition: all .2s ease-in-out; }
+.mdl-navigation__link:hover { transform: scale(1.1); }
