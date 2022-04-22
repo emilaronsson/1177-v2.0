@@ -1,20 +1,22 @@
 import React from "react";
 import { createRoot } from "react-dom/cjs/react-dom.production.min";
-import { useState } from "react/cjs/react.production.min";
-import { App } from "./components/appcomponent.js";
-import { Button } from "./components/button.js";
-import {TabsWrappedLabel} from "./components/tabs.js";
-//import { ColorTabs } from "./components/tabs.js";
+import { LifeCycle } from "./components/lifecycle.js";
+import { SelectForm } from "./components/selectform.js"
+import { NavBar } from "./components/navbar.js"
 
+//let signedIn = false;
 class Home extends React.Component {
     render() {
+
+
         return (
             <div>
-                <TabsWrappedLabel />
-                <App />
-                <Button />
+                <NavBar />
+                <LifeCycle />
+                <SelectForm />
             </div>
         );
+
 
     }
 }
