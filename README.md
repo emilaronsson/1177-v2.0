@@ -2,12 +2,12 @@
 
 ## Install
 
-Klona ner repot
----
-run `npm ci`
+Klona ner repot.<br>
+
+run `npm ci`.
 
 ## Start
 
-run `npm start`
----
+run `npm start`.<br>
+
 Applikationens byggs nu med parcel och startar en server på http://localhost:1234
