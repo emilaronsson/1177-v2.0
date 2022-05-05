@@ -1,7 +1,5 @@
 {
-  "id": 1,
-  "name": "Inbox",
-  "emails": [
+  "Emails": [
     {
       "id": 1,
       "from": "Gnosjö Vårdcentral",

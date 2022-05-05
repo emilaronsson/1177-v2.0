@@ -3,19 +3,16 @@ import { createRoot } from "react-dom/cjs/react-dom.production.min";
 import { LifeCycle } from "./components/lifecycle.js";
 import { SelectForm } from "./components/selectform.js"
 import { NavBar } from "./components/navbar.js"
-import {AjaxTest} from "./components/ajaxtest.js"
 
-//let signedIn = false;
+
 class Home extends React.Component {
+    
     render() {
-
+          
 
         return (
             <div>
                 <NavBar />
-                <LifeCycle />
-                <SelectForm />
-                <AjaxTest />
             </div>
         );
 

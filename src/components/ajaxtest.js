@@ -1,5 +1,6 @@
 import React from "react";
 import { caller } from "../api/getdata.js"
+import { SearchBar } from "./searchbar.js";
 
 export class AjaxTest extends React.Component {
     constructor(props) {
@@ -39,13 +40,17 @@ export class AjaxTest extends React.Component {
         }
         else {
             return (
-                <ul>
-                    {items.map(item => (
-                        <li key={item.id}>
-                            {item.email}
-                        </li>
-                    ))}
-                </ul>
+                <>
+                    <SearchBar />
+                    <ul>
+                        {items.map(item => (
+                            <li key={item.id}>
+                                {item.email}
+                            </li>
+                        ))}
+                    </ul>
+
+                </>
             );
         }
     }

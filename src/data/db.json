@@ -1,16 +1,18 @@
-[
-    {
-        "id": 1,
-        "from": "Gnosjö Vårdcentral",
-        "to": "Emil Aronsson",
-        "subject": "Provsvar",
-        "body": "hejhej"
-    },
-    {
-        "id": 2,
-        "from": "Gnosjö Vårdcentral",
-        "to": "Emil Aronsson",
-        "subject": "Förnya recept",
-        "body": "hejhej"
-    }
-]
+{
+    "Emails": [
+        {
+            "id": 1,
+            "from": "Gnosjö Vårdcentral",
+            "to": "Emil Aronsson",
+            "subject": "Provsvar",
+            "body": "hejhej"
+        },
+        {
+            "id": 2,
+            "from": "Gnosjö Vårdcentral",
+            "to": "Emil Aronsson",
+            "subject": "Förnya recept",
+            "body": "hejhej"
+        }
+    ]
+}
