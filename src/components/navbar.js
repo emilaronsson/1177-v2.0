@@ -1,5 +1,14 @@
 import { useState } from "react";
 import { Hamburger } from "./hamburger";
+import { AjaxTest } from "./ajaxtest";
+import { Inbox } from "./inbox";
+import * as emaildata from "../data/emaildata.json"
+import {
+    BrowserRouter as Router,
+    Routes,
+    Route,
+    Link
+} from "react-router-dom";
 
 export function NavBar() {
     const [hamburgerOpen, setHamburgerOpen] = useState(false);
@@ -9,17 +18,30 @@ export function NavBar() {
     }
     return (
         <>
+            <Router>
+                <div>
+                    <nav className="navigation">
+                        <ul>
+                            <li>
+                                <Link to="/list">Email lista</Link>
+                            </li>
+                            <li>
+                                <Link to="/inbox">Inbox</Link>
+                            </li>
 
-            <div className="navigation">
-                <ul>
-                    <li>Nav Item 1</li>
-                    <li>Nav Item 2</li>
-                    <li>Nav Item 3</li>
-                </ul>
-                <div className="hamburger" onClick={toggleHamburger}>
-                    <Hamburger isOpen={hamburgerOpen}/>
+                        </ul>
+                        
+                        <div className="hamburger" onClick={toggleHamburger}>
+                            <Hamburger isOpen={hamburgerOpen} />
+                        </div>
+                    </nav>
+                    <Routes>
+                        <Route path="/list" element={<AjaxTest />} />
+                        <Route path="/inbox" element={<Inbox mailboxes={emaildata}/>} />
+                    </Routes>
                 </div>
-            </div>
+            </Router>
+
             <style jsx>{`
                .navigation{
                  width: 100%;
@@ -39,7 +61,7 @@ export function NavBar() {
                  list-style-type: none;
                  padding-right: 10px;
                 }
-        `}</style>
+          `}</style>
         </>
     )
 }
