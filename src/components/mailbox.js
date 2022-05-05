@@ -2,12 +2,14 @@ import React from "react";
 import { Email } from "./email.js";
 import { EmailList } from "./emaillist";
 import { NoneSelected } from "./noneselected.js";
+import { caller2 } from "../api/getdata.js";
 
 export class MailBox extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            emailid: null
+            emailid: null,
+            mails: []
         }
 
         this.handleSelect = this.handleSelect.bind(this);
@@ -17,13 +19,29 @@ export class MailBox extends React.Component {
         this.setState({ emailid: id })
     }
 
+    componentDidMount() {
+        caller2.get("../Emails")
+          .then(
+            (result) => {
+              this.setState({
+                mails: result.data
+              });
+            },
+            (error) => {
+              this.setState({
+                error
+              });
+            }
+          )
+      }
+
     render() {
         let selectedEmail;
         let emailid = this.state.emailid
         console.log(emailid);
         if (emailid) {
-            let mail = this.props.emails.find((mail) => {
-                return mail.id == emailid;
+            let mail = this.state.mails.find((m) => {
+                return m.id == emailid;
             })
 
             selectedEmail = (
@@ -42,7 +60,7 @@ export class MailBox extends React.Component {
 
         return(
             <div>
-                <EmailList emails={this.props.emails} onSelectEmail={this.handleSelect} />
+                <EmailList emails={this.state.mails} onSelectEmail={this.handleSelect} />
                 <div className="email-viewer">{selectedEmail}</div>
             </div>
         );

@@ -1,30 +1,30 @@
 import React from "react";
-import axios from "axios";
 import { EmailListItem } from "./emaillistitem.js";
+
 
 export class EmailList extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      mails: []
-    }
+    // this.state = {
+    //   mails: []
+    // }
   }
 
-  componentDidMount() {
-    axios.get("../data/emaildata.json")
-      .then(
-        (result) => {
-          this.setState({
-            mails: result.data
-          });
-        },
-        (error) => {
-          this.setState({
-            error
-          });
-        }
-      )
-  }
+  // componentDidMount() {
+  //   caller2.get("../Emails")
+  //     .then(
+  //       (result) => {
+  //         this.setState({
+  //           mails: result.data
+  //         });
+  //       },
+  //       (error) => {
+  //         this.setState({
+  //           error
+  //         });
+  //       }
+  //     )
+  // }
 
   render() {
     const mails = this.props.emails;

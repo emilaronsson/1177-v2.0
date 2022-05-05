@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { Hamburger } from "./hamburger";
 import { AjaxTest } from "./ajaxtest";
-import * as emaildata from "../data/emaildata.json"
 import {
     BrowserRouter as Router,
     Routes,
@@ -9,7 +8,6 @@ import {
     Link
 } from "react-router-dom";
 import { MailBox } from "./mailbox";
-import { EmailList } from "./emaillist";
 
 export function NavBar() {
     const [hamburgerOpen, setHamburgerOpen] = useState(false);
@@ -38,7 +36,7 @@ export function NavBar() {
                     </nav>
                     <Routes>
                         <Route path="/list" element={<AjaxTest />} />
-                        <Route path="/inbox" element={<MailBox emails={emaildata}/>} />
+                        <Route path="/inbox" element={<MailBox />} />
                     </Routes>
                 </div>
             </Router>
