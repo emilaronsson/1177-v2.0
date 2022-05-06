@@ -1,13 +1,14 @@
 import { useState } from "react";
 import { Hamburger } from "./hamburger";
-import { AjaxTest } from "./ajaxtest";
+import { Contact } from "./contact";
 import {
     BrowserRouter as Router,
     Routes,
     Route,
     Link
 } from "react-router-dom";
-import { MailBox } from "./mailbox";
+import { Content } from "./content";
+import { Inbox } from "./inbox";
 
 export function NavBar() {
     const [hamburgerOpen, setHamburgerOpen] = useState(false);
@@ -15,6 +16,13 @@ export function NavBar() {
     const toggleHamburger = () => {
         setHamburgerOpen(!hamburgerOpen)
     }
+
+    const linkStyle = {
+        margin: "1rem",
+        textDecoration: "none",
+        color: 'black'
+      };
+    
     return (
         <>
             <Router>
@@ -22,10 +30,13 @@ export function NavBar() {
                     <nav className="navigation">
                         <ul>
                             <li>
-                                <Link to="/list">Axios lista</Link>
+                                <Link to="/contact" style={linkStyle}>Contact</Link>
                             </li>
                             <li>
-                                <Link to="/inbox">Inbox</Link>
+                                <Link to="/" style={linkStyle}>Inbox</Link>
+                            </li>
+                            <li>
+                                <Link to="/content" style={linkStyle}>Content</Link>
                             </li>
 
                         </ul>
@@ -35,16 +46,19 @@ export function NavBar() {
                         </div>
                     </nav>
                     <Routes>
-                        <Route path="/list" element={<AjaxTest />} />
-                        <Route path="/inbox" element={<MailBox />} />
+                        <Route path="/contact" element={<Contact />} />
+                        <Route index element={<Inbox />} />
+                        <Route path="content" element={<Content />} />
                     </Routes>
                 </div>
             </Router>
 
+            
+
             <style jsx>{`
                .navigation{
                  width: 100%;
-                 height: 50px;
+                 height: 75px;
                  background-color: darkgrey;
                 }
 
@@ -59,6 +73,8 @@ export function NavBar() {
                .navigation ul li{
                  list-style-type: none;
                  padding-right: 10px;
+                 padding-top: 2px;
+                 font-size: 2rem;
                 }
           `}</style>
         </>

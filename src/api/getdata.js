@@ -1,9 +1,17 @@
 import axios from "axios";
 
-export const caller = axios.create({
+const caller = axios.create({
     baseURL: 'https://retoolapi.dev/na9kKT'
 })
 
-export const caller2 = axios.create({
+export function getContacts() {
+    return caller.get('/data')
+}
+
+const emailsClient = axios.create({
     baseURL: 'http://localhost:3000'
 })
+
+export function getEmails() {
+    return emailsClient.get('/inboxes')
+}

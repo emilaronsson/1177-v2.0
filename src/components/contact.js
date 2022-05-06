@@ -1,8 +1,8 @@
 import React from "react";
-import { caller } from "../api/getdata.js"
+import { getContacts } from "../api/getdata.js"
 import { SearchBar } from "./searchbar.js";
 
-export class AjaxTest extends React.Component {
+export class Contact extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -13,7 +13,7 @@ export class AjaxTest extends React.Component {
     }
 
     componentDidMount() {
-        caller.get("/data")
+        getContacts()
             .then(
                 (result) => {
                     this.setState({
@@ -32,7 +32,6 @@ export class AjaxTest extends React.Component {
 
     render() {
         const { error, isLoaded, items } = this.state;
-        console.log(items);
         if (error) {
             return <div>Error: {error.message}</div>;
         }
@@ -42,6 +41,7 @@ export class AjaxTest extends React.Component {
         else {
             return (
                 <>
+                <h1>Work in progress!</h1>
                     <SearchBar />
                     <ul>
                         {items.map(item => (
@@ -50,7 +50,9 @@ export class AjaxTest extends React.Component {
                             </li>
                         ))}
                     </ul>
-
+                    <textfield>
+                        Exempeldata!
+                    </textfield>
                 </>
             );
         }

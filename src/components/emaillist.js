@@ -5,30 +5,10 @@ import { EmailListItem } from "./emaillistitem.js";
 export class EmailList extends React.Component {
   constructor(props) {
     super(props);
-    // this.state = {
-    //   mails: []
-    // }
   }
-
-  // componentDidMount() {
-  //   caller2.get("../Emails")
-  //     .then(
-  //       (result) => {
-  //         this.setState({
-  //           mails: result.data
-  //         });
-  //       },
-  //       (error) => {
-  //         this.setState({
-  //           error
-  //         });
-  //       }
-  //     )
-  // }
 
   render() {
     const mails = this.props.emails;
-    console.log(mails);
     let emailList = mails.map((mail) => {
       return (
         <EmailListItem

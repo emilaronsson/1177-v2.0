@@ -18,7 +18,7 @@ export function Hamburger({isOpen}) {
                 justify-content: space-around;
                 flex-flow: column nowrap;
                 z-index: 10;
-                padding: 2px;
+                padding: 1px;
               }
 
               .burger{

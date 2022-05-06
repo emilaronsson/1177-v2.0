@@ -11,12 +11,6 @@ export function Tabs() {
     setValue(newValue);
   };
 
-  // const renderTabContent = () => {
-  //   if(value = 'one') {
-  //     <SelectForm />
-  //   }
-  // }
-
   return (
     <div id="tabs-container">
 

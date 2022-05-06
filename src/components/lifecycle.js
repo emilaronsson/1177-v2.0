@@ -29,11 +29,3 @@ export class LifeCycle extends React.Component {
       );
     }
   }
-  
-//   export class Header extends React.Component {
-//     render() {
-//       return (
-//         <h1>Hello World!</h1>
-//       );
-//     }
-//   }
