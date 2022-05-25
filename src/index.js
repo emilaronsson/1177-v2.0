@@ -1,8 +1,7 @@
 import React from "react";
 import { createRoot } from "react-dom/cjs/react-dom.production.min";
-import { LifeCycle } from "./components/lifecycle.js";
-import { SelectForm } from "./components/selectform.js"
-import { NavBar } from "./components/navbar.js"
+import { NavBar } from "./components/navbar.js";
+import {Chat} from "./components/chatwidget.js";
 
 
 class Home extends React.Component {
@@ -13,6 +12,7 @@ class Home extends React.Component {
         return (
             <div>
                 <NavBar />
+                <Chat />
             </div>
         );
 

@@ -21,7 +21,7 @@ export function NavBar() {
     const linkStyle = {
         margin: "1rem",
         textDecoration: "none",
-        color: 'black'
+        color: 'white'
     };
 
     return (
@@ -74,7 +74,7 @@ export function NavBar() {
                .navigation{
                  width: 100%;
                  height: 75px;
-                 background-color: darkgrey;
+                 background-color: #35cce6;
                 }
 
                .navigation ul{
@@ -88,7 +88,7 @@ export function NavBar() {
                .navigation ul li{
                  list-style-type: none;
                  padding-right: 10px;
-                 padding-top: 2px;
+                 padding-top: 10px;
                  font-size: 2rem;
                 }
           `}</style>

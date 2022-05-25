@@ -1,6 +1,7 @@
 import React from "react";
 import { getContacts } from "../api/getdata.js"
 import { SearchBar } from "./searchbar.js";
+import { Chat } from "./chatwidget.js";
 
 export class Contact extends React.Component {
     constructor(props) {
