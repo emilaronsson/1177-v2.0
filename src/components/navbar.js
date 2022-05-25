@@ -9,6 +9,7 @@ import {
 } from "react-router-dom";
 import { Content } from "./content";
 import { Inbox } from "./inbox";
+import { ErrorBoundary } from "./errorboundary";
 
 export function NavBar() {
     const [hamburgerOpen, setHamburgerOpen] = useState(false);
@@ -21,8 +22,8 @@ export function NavBar() {
         margin: "1rem",
         textDecoration: "none",
         color: 'black'
-      };
-    
+    };
+
     return (
         <>
             <Router>
@@ -40,20 +41,34 @@ export function NavBar() {
                             </li>
 
                         </ul>
-                        
+
                         <div className="hamburger" onClick={toggleHamburger}>
                             <Hamburger isOpen={hamburgerOpen} />
                         </div>
                     </nav>
+
                     <Routes>
-                        <Route path="/contact" element={<Contact />} />
-                        <Route index element={<Inbox />} />
-                        <Route path="content" element={<Content />} />
+                        <Route path="/contact" element={
+                            <ErrorBoundary>
+                                <Contact />
+                            </ErrorBoundary>
+                        } />
+                        <Route index element={
+                            <ErrorBoundary>
+                                <Inbox />
+                            </ErrorBoundary>
+                        } />
+                        <Route path="content" element={
+                            <ErrorBoundary>
+                                <Content />
+                            </ErrorBoundary>
+                        } />
                     </Routes>
+
                 </div>
             </Router>
 
-            
+
 
             <style jsx>{`
                .navigation{

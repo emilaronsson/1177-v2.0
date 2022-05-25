@@ -9,7 +9,8 @@ export class Inbox extends React.Component {
         super(props);
         this.state = {
             mailbox_id: null,
-            mailboxes: []
+            mailboxes: [],
+            error: null
         }
         this.handleSelectMailbox = this.handleSelectMailbox.bind(this);
     }
