@@ -2,7 +2,7 @@ import React from "react";
 import { MailBox } from "./mailbox.js";
 import { NoneSelected } from "./noneselected.js";
 import { MailboxList } from "./mailboxlist.js";
-import { getEmails } from "../api/getdata.js";
+import { getMailboxes } from "../api/apiservice.js";
 
 export class Inbox extends React.Component {
     constructor(props) {
@@ -20,7 +20,7 @@ export class Inbox extends React.Component {
     }
 
     componentDidMount() {
-        getEmails()
+        getMailboxes()
             .then(
                 (result) => {
                     this.setState({
@@ -43,12 +43,12 @@ export class Inbox extends React.Component {
             let mailbox = this.state.mailboxes.find((mailbox) => {
                 return mailbox.id == mailbox_id;
             })
-            selectedMailbox = <MailBox key={mailbox.id} name={mailbox.name} emails={mailbox.emails} />;
+            console.log(mailbox);
+            selectedMailbox = <MailBox key={mailbox.id} name={mailbox.name} emails={mailbox.emails} inboxid={mailbox.id}/>;
         }
         else {
             selectedMailbox = <NoneSelected text="mailbox" />
         }
-
         return (
             <div className="app row">
                 <MailboxList mailboxes={this.state.mailboxes} onSelectedMailbox={this.handleSelectMailbox} />

@@ -21,7 +21,8 @@ export function NavBar() {
     const linkStyle = {
         margin: "1rem",
         textDecoration: "none",
-        color: 'white'
+        color: 'white',
+        fontFamily: 'sans-serif'
     };
 
     return (

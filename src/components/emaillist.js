@@ -1,5 +1,6 @@
 import React from "react";
 import { EmailListItem } from "./emaillistitem.js";
+import PropTypes from "prop-types"
 
 
 export class EmailList extends React.Component {
@@ -36,3 +37,9 @@ export class EmailList extends React.Component {
     )
   }
 }
+
+EmailList.propTypes = {
+  onSelectEmail: PropTypes.func,
+  emails: PropTypes.array
+}
+

@@ -14,21 +14,21 @@ export function Tabs() {
   return (
     <div id="tabs-container">
 
-      
-        <Tabs
-          value={value}
-          onChange={handleChange}
-          aria-label="wrapped label tabs example"
-          variant="fullWidth"
-          centered
-        >
-          <Tab
-            value="one"
-            label="Item One"
-          />
-          <Tab value="two" label="Item Two" />
-          <Tab value="three" label="Item Three" />
-        </Tabs>
+
+      <Tabs
+        value={value}
+        onChange={handleChange}
+        aria-label="wrapped label tabs example"
+        variant="fullWidth"
+        centered
+      >
+        <Tab
+          value="one"
+          label="Item One"
+        />
+        <Tab value="two" label="Item Two" />
+        <Tab value="three" label="Item Three" />
+      </Tabs>
     </div>
   );
 }

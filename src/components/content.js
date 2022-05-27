@@ -1,6 +1,7 @@
 import React from "react";
-import { LifeCycle } from "./lifecycle";
+import { Toggle } from "./toggle";
 import { SelectForm } from "./selectform";
+import { Tabs } from "./tabs";
 
 export class Content extends React.Component {
     constructor(props) {
@@ -11,7 +12,7 @@ export class Content extends React.Component {
         return(
             <>
             <h1>Work in progress!</h1>
-            <LifeCycle />
+            <Toggle toggleComponent={<Tabs />} />
             <SelectForm />
             </>
         )
