@@ -5,7 +5,7 @@ import { NoneSelected } from "./noneselected.js";
 import { getEmails } from "../api/apiservice.js";
 import { deleteEmail } from "../api/apiservice";
 import Button from '@mui/material/Button';
-import { ErrorBoundary } from "react-error-boundary";
+import { ErrorBoundary } from "./errorboundary";
 
 export class MailBox extends React.Component {
     constructor(props) {
