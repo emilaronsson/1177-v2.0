@@ -1,4 +1,5 @@
 import React from "react";
+import { PropTypes } from "prop-types";
 
 export class EmailListItem extends React.Component {
     constructor(props) {
@@ -16,4 +17,12 @@ export class EmailListItem extends React.Component {
             </tr>
         )
     }
+}
+
+EmailListItem.propTypes = {
+    on_click: PropTypes.func,
+    id: PropTypes.number,
+    subject: PropTypes.string,
+    from: PropTypes.string,
+    to: PropTypes.string
 }

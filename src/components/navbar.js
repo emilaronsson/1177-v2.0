@@ -9,7 +9,6 @@ import {
 } from "react-router-dom";
 import { Content } from "./content";
 import { Inbox } from "./inbox";
-import { ErrorBoundary } from "./errorboundary";
 
 export function NavBar() {
     const [hamburgerOpen, setHamburgerOpen] = useState(false);
@@ -50,19 +49,13 @@ export function NavBar() {
 
                     <Routes>
                         <Route path="/contact" element={
-                            <ErrorBoundary>
                                 <Contact />
-                            </ErrorBoundary>
                         } />
                         <Route index element={
-                            <ErrorBoundary>
                                 <Inbox />
-                            </ErrorBoundary>
                         } />
                         <Route path="content" element={
-                            <ErrorBoundary>
                                 <Content />
-                            </ErrorBoundary>
                         } />
                     </Routes>
 

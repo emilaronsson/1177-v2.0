@@ -32,13 +32,28 @@ export class Toggle extends React.Component {
       toggleItem = this.props.toggleComponent;
     };
     return (
-      <div>
+      
+      <>
+      <div className="togglebox">
         {toggleItem}
+        <div className="hidebtn">
         <ThemeProvider theme={buttonTheme}>
-          <Button color="neutral" variant="contained" type="button" onClick={this.toggleHeader}>{this.state.show ? "Unmount" : "Mount"}</Button>
+          <Button color="neutral" variant="contained" type="button" onClick={this.toggleHeader}>{this.state.show ? "Hide" : "Show"}</Button>
         </ThemeProvider>
-        <b>Tryck på knappen för att toggla av/på item-tabs!</b>
+        </div>
       </div>
+
+      {/*Här använder jag css för att positionera min Toggle-komponent intill den komponent som den ska interagera med.
+       Denna approach försvårar dessvärre återanvändning av komponenten, skulle vilja hitta en bättre lösning.
+       Går dock bra att bara radera style-elementet eller anpassa det för önskvärd effekt*/}
+      <style jsx>{`
+        .hidebtn{
+          position: fixed;
+          top: 94%;
+          left: 88%;
+        }
+      `}</style>
+      </>
     );
   }
 }

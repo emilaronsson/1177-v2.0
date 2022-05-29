@@ -5,6 +5,7 @@ import { NoneSelected } from "./noneselected.js";
 import { getEmails } from "../api/apiservice.js";
 import { deleteEmail } from "../api/apiservice";
 import Button from '@mui/material/Button';
+import { ErrorBoundary } from "react-error-boundary";
 
 export class MailBox extends React.Component {
     constructor(props) {
@@ -12,7 +13,8 @@ export class MailBox extends React.Component {
         this.state = {
             emailid: null,
             emails: [],
-            error: null
+            error: null,
+            errorMessage: ''
         }
 
         this.handleSelect = this.handleSelect.bind(this);
@@ -40,16 +42,22 @@ export class MailBox extends React.Component {
                 this.setState({
                     emails: result.data
                 })
-            },
-            (error) => {
-                this.setState({
-                    error
-                });
             }
-        )
+        ).catch(err => {
+            console.log(err);
+            this.setState({
+                error: err,
+                errorMessage: err.message
+            });
+        });
     }
 
     render() {
+        let err = this.state.error
+        if(err) {
+            return <h3>{this.state.errorMessage}</h3>
+        }
+
         let selectedEmail;
         let emailid = this.state.emailid
         if (emailid) {
@@ -59,6 +67,7 @@ export class MailBox extends React.Component {
             })
             console.log(mail);
             selectedEmail = (
+                <ErrorBoundary>
                 <Email
                     id={mail.id}
                     key={mail.id}
@@ -68,6 +77,7 @@ export class MailBox extends React.Component {
                     body={mail.body}
                     deleteButton={<Button color="neutral" variant="contained" onClick={() => this.onEmailWasDeleted(this.emailid)}>Radera</Button>}
                 />
+                </ErrorBoundary>
             );
         }
         else {
@@ -77,7 +87,7 @@ export class MailBox extends React.Component {
         return (
             <div>
                 <EmailList emails={this.state.emails} onSelectEmail={this.handleSelect} />
-                <div className="email-viewer">{selectedEmail}</div>
+                <div className="email-viewer"><ErrorBoundary>{selectedEmail}</ErrorBoundary></div>
             </div>
         );
     }

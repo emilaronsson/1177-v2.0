@@ -1,64 +1,62 @@
 {
-    "inboxes": [
-        {
-            "id": 1,
-            "name": "Inbox",
-            "emails": [
-                {
-                    "id": 1,
-                    "inboxid": 1,
-                    "from": "Gnosjö Vårdcentral",
-                    "to": "Emil Aronsson",
-                    "subject": "Provsvar",
-                    "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec non tincidunt est, eget dapibus leo. Cras venenatis quam lacus, eu cursus risus finibus sed. Nunc sit amet urna vel nisl molestie pellentesque et placerat augue. Nunc ac maximus ex, nec consectetur justo. Pellentesque venenatis ante arcu, eu aliquam nibh pretium id. Cras sed blandit ex. Integer in enim vel elit sagittis sagittis in vitae mauris."
-                },
-                {
-                    "id": 2,
-                    "inboxid": 1,
-                    "from": "Gnosjö Vårdcentral",
-                    "to": "Emil Aronsson",
-                    "subject": "Förnya recept",
-                    "body": "Aenean at magna augue. Mauris blandit, magna auctor sollicitudin iaculis, diam risus pulvinar sem, eu dapibus mi eros ac metus. Phasellus vel nulla sit amet risus bibendum euismod. Cras posuere eu risus non congue. Proin molestie ante sit amet lorem pellentesque dictum. Sed et metus tincidunt est accumsan cursus in vitae lectus. Mauris imperdiet nisl nec eros mollis commodo. Nunc aliquam dictum viverra. Sed vehicula ligula augue, convallis dignissim diam suscipit nec. Nunc est odio, pellentesque ultricies nisi sed, pellentesque ullamcorper nisl. Praesent felis nulla, porttitor quis turpis sed, sodales molestie elit."
-                },
-                {
-                    "id": 3,
-                    "inboxid": 1,
-                    "from": "Gnosjö Vårdcentral",
-                    "to": "Emil Aronsson",
-                    "subject": "Förnya recept",
-                    "body": "Nam tempus luctus vulputate. Vestibulum vulputate auctor ante, vel volutpat erat placerat quis. Curabitur faucibus, quam at sollicitudin egestas, elit purus sagittis ipsum, mattis mattis nisl lectus vitae lacus. Morbi eu elit diam. Fusce laoreet varius ex ac ultricies. Ut nisi magna, bibendum ac risus vitae, eleifend bibendum felis. Sed vel nunc vitae ex ultricies sodales non non dolor. Morbi aliquet, dolor et venenatis faucibus, nisi tellus dignissim felis, id tristique sapien turpis eget ipsum. Nam vel mi id ex tincidunt eleifend."
-                },
-                {
-                    "id": 4,
-                    "inboxid": 1,
-                    "from": "Gnosjö Vårdcentral",
-                    "to": "Emil Aronsson",
-                    "subject": "Förnya recept",
-                    "body": "Phasellus posuere pharetra volutpat. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec vulputate eros a ultrices tristique. Donec ac neque ac nulla aliquam egestas sed vel tortor. Sed semper venenatis neque non eleifend. Aenean sit amet orci ut ligula pulvinar ultrices. Curabitur volutpat elit sed diam laoreet, ut porta erat fringilla. Praesent sodales magna a nunc mollis ornare. Proin lorem neque, condimentum in facilisis nec, scelerisque eu ante."
-                },
-                {
-                    "id": 5,
-                    "inboxid": 1,
-                    "from": "Gnosjö Vårdcentral",
-                    "to": "Emil Aronsson",
-                    "subject": "Förnya recept",
-                    "body": "Ut posuere in risus non porta. Fusce id felis tempus dui pulvinar convallis. Aliquam nec felis sit amet urna tempus consequat id finibus turpis. Sed eu purus et eros posuere viverra. Integer lacinia pharetra nulla. Integer placerat iaculis turpis a posuere. Sed tellus est, fringilla sed dolor id, auctor ultricies dui. Sed vestibulum eu est vel lacinia. Phasellus lacinia, urna nec volutpat imperdiet, augue turpis consectetur urna, id interdum mauris sem sed ligula. Integer vel pharetra urna, non rutrum nibh. Phasellus efficitur rhoncus consequat. Mauris sollicitudin quam ut quam varius faucibus. Phasellus molestie mauris et ipsum consequat, vitae pretium purus egestas."
-                }
-            ]
-        },
-        {
-            "id": 2,
-            "name": "Sent",
-            "emails": [
-                {
-                    "id": 6,
-                    "inboxid": 2,
-                    "from": "Emil Aronsson",
-                    "to": "Gnosjö Vårdcentral",
-                    "subject": "Hej!",
-                    "body": "hej"
-                }
-            ]
-        }
-    ]
+  "inboxes": [
+    {
+      "id": 1,
+      "name": "Inbox"
+    },
+    {
+      "id": 2,
+      "name": "Sent"
+    }
+  ],
+  "emails": [
+    {
+      "id": 1,
+      "inboxid": 1,
+      "from": "Gnosjö Vårdcentral",
+      "to": "Emil Aronsson",
+      "subject": "Provsvar",
+      "body": "Phasellus vel nulla sit amet risus bibendum euismod. Cras posuere eu risus non congue. Proin molestie ante sit amet lorem pellentesque dictum. Sed et metus tincidunt est accumsan cursus in vitae lectus. Mauris imperdiet nisl nec eros mollis commodo. Nunc aliquam dictum viverra. Sed vehicula ligula augue, convallis dignissim diam suscipit nec. Nunc est odio, pellentesque ultricies nisi sed, pellentesque ullamcorper nisl. Praesent felis nulla, porttitor quis turpis sed, sodales molestie elit."
+    },
+    {
+      "id": 2,
+      "inboxid": 1,
+      "from": "Gnosjö Vårdcentral",
+      "to": "Emil Aronsson",
+      "subject": "Förnya recept",
+      "body": "Aenean at magna augue. Mauris blandit, magna auctor sollicitudin iaculis, diam risus pulvinar sem, eu dapibus mi eros ac metus. Phasellus vel nulla sit amet risus bibendum euismod. Cras posuere eu risus non congue. Proin molestie ante sit amet lorem pellentesque dictum. Sed et metus tincidunt est accumsan cursus in vitae lectus. Mauris imperdiet nisl nec eros mollis commodo. Nunc aliquam dictum viverra. Sed vehicula ligula augue, convallis dignissim diam suscipit nec. Nunc est odio, pellentesque ultricies nisi sed, pellentesque ullamcorper nisl. Praesent felis nulla, porttitor quis turpis sed, sodales molestie elit."
+    },
+    {
+      "id": 3,
+      "inboxid": 1,
+      "from": "Gnosjö Vårdcentral",
+      "to": "Emil Aronsson",
+      "subject": "Förnya recept",
+      "body": "Nam tempus luctus vulputate. Vestibulum vulputate auctor ante, vel volutpat erat placerat quis. Curabitur faucibus, quam at sollicitudin egestas, elit purus sagittis ipsum, mattis mattis nisl lectus vitae lacus. Morbi eu elit diam. Fusce laoreet varius ex ac ultricies. Ut nisi magna, bibendum ac risus vitae, eleifend bibendum felis. Sed vel nunc vitae ex ultricies sodales non non dolor. Morbi aliquet, dolor et venenatis faucibus, nisi tellus dignissim felis, id tristique sapien turpis eget ipsum. Nam vel mi id ex tincidunt eleifend."
+    },
+    {
+      "id": 4,
+      "inboxid": 1,
+      "from": "Gnosjö Vårdcentral",
+      "to": "Emil Aronsson",
+      "subject": "Förnya recept",
+      "body": "Phasellus posuere pharetra volutpat. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec vulputate eros a ultrices tristique. Donec ac neque ac nulla aliquam egestas sed vel tortor. Sed semper venenatis neque non eleifend. Aenean sit amet orci ut ligula pulvinar ultrices. Curabitur volutpat elit sed diam laoreet, ut porta erat fringilla. Praesent sodales magna a nunc mollis ornare. Proin lorem neque, condimentum in facilisis nec, scelerisque eu ante."
+    },
+    {
+      "id": 5,
+      "inboxid": 1,
+      "from": "Gnosjö Vårdcentral",
+      "to": "Emil Aronsson",
+      "subject": "Förnya recept",
+      "body": "Ut posuere in risus non porta. Fusce id felis tempus dui pulvinar convallis. Aliquam nec felis sit amet urna tempus consequat id finibus turpis. Sed eu purus et eros posuere viverra. Integer lacinia pharetra nulla. Integer placerat iaculis turpis a posuere. Sed tellus est, fringilla sed dolor id, auctor ultricies dui. Sed vestibulum eu est vel lacinia. Phasellus lacinia, urna nec volutpat imperdiet, augue turpis consectetur urna, id interdum mauris sem sed ligula. Integer vel pharetra urna, non rutrum nibh. Phasellus efficitur rhoncus consequat. Mauris sollicitudin quam ut quam varius faucibus. Phasellus molestie mauris et ipsum consequat, vitae pretium purus egestas."
+    },
+    {
+      "id": 6,
+      "inboxid": 2,
+      "from": "Emil Aronsson",
+      "to": "Gnosjö Vårdcentral",
+      "subject": "Hej!",
+      "body": "hej"
+    }
+  ]
 }

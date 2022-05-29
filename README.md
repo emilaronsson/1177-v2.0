@@ -16,7 +16,13 @@ Applikationens byggs nu med parcel och startar en server på http://localhost:12
 
 ## Externa bibliotek
 
+React: Används för att bygga de komponenter som mitt UI består av.
+
+React-dom: Används ihop med react för att modiefiera DOMen.
+
 React-router: Används för routing i applikationen.
+
+React-chat-widget: Låter mig skapa en simpel chatt-ruta i min applikation.
 
 Json-server: Används för att skapa en "mock-API" som jag hämtar data ifrån.
 

@@ -18,7 +18,8 @@ export class Chat extends React.Component {
                 <Widget
                     handleNewUserMessage={this.handleNewUserMessage}
                     title="1177"
-                    subtitle="Här kan du chatta med dina vårdgivare"
+                    subtitle="Här kan du chatta med din vårdgivare"
+                    emojis="true"
                 />
             </div>
         );
